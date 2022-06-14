@@ -1,0 +1,39 @@
+$first-color: #f05274;
+$second-color: #c9cfd1;
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+@mixin color-and-text ($background-color, $text-color) {
+    width: 50%;
+    background-color: $background-color;
+
+    .text {
+        margin-top: 40%;
+        text-align: center;
+        font-size: 150px;
+        color: $text-color;
+    }
+}
+
+body {
+    @include reset;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+
+    .left {
+        @include color-and-text($first-color, $second-color);
+    }
+
+    .right {
+        @include color-and-text($second-color, $first-color);
+    }
+}
+

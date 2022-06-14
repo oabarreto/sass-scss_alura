@@ -1,0 +1,30 @@
+@import '../abstract/variables';
+
+.banner {
+    background: url(../imagens/banner.jpeg) 27% center no-repeat;
+    min-height: 350px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+
+    .inner-banner {
+        padding: 3rem;
+        background-color: $tertiary-color;
+        opacity: 0.8;
+        border: 0.5px solid $secondary-color;
+        filter: $drop-shadow;
+
+        h1 {
+            text-align: center;
+            font-size: $text-size;
+            color: $primary-color;
+            margin-bottom: .3rem;
+        }
+        h2 {
+            font-size: $text-size / 2;
+            color: $secondary-color;
+        }
+    }
+}
